@@ -24,8 +24,9 @@ remove_menu() {
 }
 
 install_menu() {
-  case $(menu "Install" "󰣇  Package\n  Web App") in
-  *Package*) terminal "$SCRIPT_PATH"/pkg-install.sh ;;
+  case $(menu "Install" "󰣇  Arch Install\n󰣇  AUR Install\n  Web App") in
+  *Arch*) terminal "$SCRIPT_PATH"/pkg-install.sh ;;
+  *AUR*) terminal "$SCRIPT_PATH"/aur-pkg-install.sh ;;
   *Web*) terminal "$SCRIPT_PATH"/webapp-install.sh ;;
   *) main_menu ;;
   esac
