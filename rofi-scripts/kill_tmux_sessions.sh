@@ -26,7 +26,7 @@ create_or_attach() {
 
 # Rofi command to show existing sessions and allow user input for a new name
 selected_session=$(list_sessions |
-  rofi -dmenu -i -p "Tmux Session")
+  rofi -dmenu -i -p "Kill Tmux Session")
 [ -n "$selected_session" ] || exit 0
 
 # Nuke any existing st (since you only use one terminal)

@@ -54,10 +54,11 @@ system_menu() {
 }
 
 main_menu() {
-  case $(menu "Start" " Apps\n  Tmux_Sessions\n  Project_tmux_Sessions\n󰉉  Install\n󰉉  Uninstall\n󰧑  Learn\n  System\n- About") in
+  case $(menu "Start" " Apps\n  Tmux_Sessions\n  Project\n  Kill_Tmux_Session\n󰉉  Install\n󰉉  Uninstall\n󰧑  Learn\n  System\n- About") in
   *Apps*) "$ROFI_PATH"/launchers/launcher-1.sh ;;
   *Tmux_Sessions*) "$SCRIPT_PATH"/rofi-scripts/tmux_sessions.sh ;;
-  *Project_tmux_Sessions*) "$SCRIPT_PATH"/rofi-scripts/projects_menu.sh ;;
+  *Kill_Tmux_Session*) "$SCRIPT_PATH"/rofi-scripts/kill_tmux_sessions.sh ;;
+  *Project*) "$SCRIPT_PATH"/rofi-scripts/projects_menu.sh ;;
   *Install*) install_menu ;;
   *Uninstall*) remove_menu ;;
   *Learn*) learn_menu ;;
